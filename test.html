@@ -21,7 +21,7 @@
 	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 	map.setMapType(BMAP_EARTH_MAP);  
    // 设置地图类型为地球模式
-   var a = 120.5;
+   var a = 135.522;
    var b = 27.5;
    setTimeout(()=>{
 	setInterval(()=>{
@@ -29,7 +29,7 @@
 		b += 10;
 		
 		map.panTo(new window.BMapGL.Point(a, 27.5), 4); 
-	},100)
+	},500)
    },2000)
 
 </script>
