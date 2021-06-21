@@ -23,12 +23,12 @@
    // 设置地图类型为地球模式
    var a = 120.5;
    var b = 27.5;
-   //setTimeout(()=>{
-		//setInterval(()=>{
-			//a += 10;
-			//b += 10;
-			//map.panTo(new window.BMapGL.Point(a, b), 5); 
-		//},100)
-  // },2000)
+   setTimeout(()=>{
+		setInterval(()=>{
+			a += 10;
+			b += 10;
+			map.panTo(new window.BMapGL.Point(a, b), 5); 
+		},100)
+   },2000)
 
 </script>
