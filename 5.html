@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击标记弹出信息窗口</title>
+</head>
+<script charset="utf-8"
+<style type="text/css">
+
+</style>
+
+<body>
+    <div id="container">
+		111
+	</div>
+    <script>
+		 var elmnt = document.getElementByid('container');
+		   zoomElement(elmnt) {
+        if (elmnt.addEventListener) {
+            // IE9, Chrome, Safari, Opera
+            elmnt.addEventListener('mousewheel', MouseWheelHandler, false);
+            // Firefox
+            elmnt.addEventListener('DOMMouseScroll', MouseWheelHandler, false);
+        }
+ 
+        let i = 1;
+        function MouseWheelHandler(e) {
+            // cross-browser wheel delta
+            const event = window.event || e; // old IE support
+            event.preventDefault();
+            const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+            if (delta === 1) {
+                i += 0.2;
+                elmnt.style.transform = 'scale(' + i + ')';
+            } else if (delta === -1) {
+                if (i < 0.3) {
+                    i = 0.2;
+                } else {
+                    i -= 0.2;
+                }
+                elmnt.style.transform = 'scale(' + i + ')';
+            }
+            return false;
+        }
+    }
+	    zoomElement(elmnt) 
+    </script>
+</body>
+
+</html>
